@@ -33,6 +33,22 @@ FROM nom_table;
 SELECT * FROM employes;
 ```
 
+Dans le cadre d'une sélection plus précise, on peut faire usage de `LIKE` : 
+
+```sql
+SELECT * FROM employes WHERE nom LIKE '%Jean%';
+```
+
+Il s'agit d'un opérateur de recherche qui permet de trouver des valeurs correspondant à une expression régulière. Le symbole `%`, détermine les caractères situé à l'emplacement ou se trouve ce même symbole. 
+
+Exemple :
+
+`%S` = Veut dire ce qu'il y a **avant** la lettre `s` ou `S`
+`S%` = Veut dire ce qu'il y a **après** la lettre `s` ou `S`
+`%S%` = Veut dire ce qu'il y a **avant** et **après** la lettre `s` ou `S`, ce qui signifie les valeurs contenant la lettre `s` ou `S`.
+
+
+
 ### UPDATE : Modifier des données
 La commande `UPDATE` est utilisée pour modifier des valeurs existantes dans une table.
 
